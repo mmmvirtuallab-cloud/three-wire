@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experiment Procedure</title>
+
+
+  <!-- External CSS (optional) -->
+  <link rel="stylesheet" href="css/style.css" />
+
+
+  <style>
+    /* ---------- PAGE LAYOUT ---------- */
+    main {
+      max-width: 1400px;  /* wider main section */
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+
+    .two-pane-layout {
+      display: flex;
+      gap: 25px;
+      width: 100%;
+      margin-top: 25px;
+      align-items: flex-start;
+    }
+
+
+    .pane {
+      flex: 1;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      background-color: #fff;
+    }
+
+
+    .pane-header {
+      background-color: #00796b;
+      color: white;
+      padding: 12px 20px;
+      font-size: 1.1em;
+      font-weight: 600;
+      text-align: center;
+    }
+
+
+    /* ---------- VIDEO ---------- */
+    .video-pane .pane-content {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background-color: #000;
+    }
+
+
+    .video-pane iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      object-fit: contain;
+    }
+
+
+    /* ---------- PDF ---------- */
+    .manual-pane .pane-content {
+      height: 600px; /* smaller height but scrollable */
+      overflow-y: auto;
+      background-color: #f1fcfa;
+    }
+
+
+    .manual-pane iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+
+    /* ---------- BUTTON ---------- */
+    .next-button {
+      display: block;
+      margin: 40px auto 0;
+      background-color: #00796b;
+      color: #fff;
+      font-size: 1rem;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+
+    .next-button:hover {
+      background-color: #00695c;
+    }
+
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 900px) {
+      .two-pane-layout {
+        flex-direction: column;
+      }
+      .manual-pane .pane-content {
+        height: 400px;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+  <header>
+    <h1>Virtual Metrology Lab: Three-Wire Method</h1>
+    <nav>
+      <a href="materials.html" onclick="activateLink(event, 'materials.html')">Introduction</a>
+      <a href="procedure.html" onclick="activateLink(event, 'procedure.html')">Procedure</a>
+      <a href="lab.html" onclick="activateLink(event, 'lab.html')">Virtual Lab Area</a>
+      <a href="quiz.html" onclick="activateLink(event, 'quiz.html')">Quiz</a>
+    </nav>
+  </header>
+
+
+  <main>
+    <section id="procedure">
+      <h2>Live Procedure and Manual Reference</h2>
+      <p class="description">
+        Watch the live demonstration on the left and scroll through the detailed lab manual on the right.
+      </p>
+
+
+      <div class="two-pane-layout">
+        <!-- LEFT PANE: VIDEO -->
+        <div class="pane video-pane">
+          <div class="pane-header">Video Demonstration</div>
+          <div class="pane-content">
+            <iframe
+              src="https://www.youtube.com/embed/Z4ZHaGafMh8?start=83"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+
+
+        <!-- RIGHT PANE: PDF -->
+        <div class="pane manual-pane">
+          <div class="pane-header">Lab Manual (MMM_Procedure (1).pdf)</div>
+          <div class="pane-content">
+            <!-- Local PDF viewer (scrollable, zoom enabled in browser) -->
+            <iframe src="files/MMM_Procedure%20(1).pdf" type="application/pdf"></iframe>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- BUTTON BELOW BOTH PANES -->
+      <button class="next-button" onclick="window.location.href='lab.html'">
+        Proceed to Virtual Lab Area →
+      </button>
+    </section>
+  </main>
+
+
+  <footer>
+    <p>&copy; 2025 Virtual Metrology Lab</p>
+  </footer>
+
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>

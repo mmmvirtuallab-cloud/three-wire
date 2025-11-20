@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three-Wire Method Virtual Lab</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Virtual Metrology Lab: Three-Wire Method</h1>
+        <nav>
+            <!-- FIX: Ensure navigation uses window.location for reliability -->
+            <a href="materials.html" onclick="activateLink(event, 'materials.html')">Introduction</a>
+            <a href="procedure.html" onclick="activateLink(event, 'procedure.html')">Procedure</a>
+            <a href="lab.html" onclick="activateLink(event, 'lab.html')">Virtual Lab Area</a>
+            <a href="quiz.html" onclick="activateLink(event, 'quiz.html')">Quiz</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="component-showcase">
+            <h2>Essential Components of the Three-Wire Method</h2>
+            <p class="description">Step into the world of metrology, where microns matter and precision defines perfection.</p>
+
+            <!-- Component 1: Threaded Specimen (Image: Threaded part) -->
+            <div class="component-card component-teal">
+                <div class="component-content">
+                    <h3>1. External Threaded Specimen</h3>
+                    <p>The threaded specimen is used to determine the effective (pitch) diameter of screw threads with high accuracy.
+Using the three-wire method, various types of threads — such as metric, Whitworth, or ACME — can be precisely measured.
+This measurement ensures proper fit, interchangeability, and performance of threaded components in engineering applications.</p>
+                </div>
+                <div class="component-image">
+                    <!-- Image 1: Threaded Specimen -->
+                    <img src="img/threaded_specimen.jpg" alt="External Screw Thread Specimen" class="component-img">
+                </div>
+            </div>
+            
+            <!-- Component 2: Specimen Holding Table/Stand (Image: Lab Stand) -->
+            <div class="component-card component-teal">
+                <div class="component-content">
+                    <h3>2. Specimen Holding Table/Stand (The Table)</h3>
+                    <p>The table provides a stable and vibration-free base for accurate measurement of the threaded specimen.
+It ensures that the specimen and measuring instruments remain properly aligned during the process.
+This stability helps maintain precision and repeatability in the three-wire method.</p>
+                </div>
+                <div class="component-image">
+                    <!-- Image 2: Stand or Table for holding specimen -->
+                    <img src="img/holding_stand.jpg" alt="Specimen Holding Stand" class="component-img">
+                </div>
+            </div>
+
+            <!-- Component 3: Wires (Best Size Wires) (Image: Cross-section) -->
+            <div class="component-card component-teal">
+                <div class="component-content">
+                    <h3>3. Precision Wires (The Wire)</h3>
+                    <p>The wires are precision-made cylindrical pieces placed in the thread grooves to measure the effective diameter.
+They make point contact with the thread flanks, ensuring accurate representation of the pitch diameter.
+Different wire sizes are used depending on the thread pitch and type of the specimen.</p>
+                </div>
+                <div class="component-image">
+                    <!-- Image 3: Wires -->
+                    <img src="img/precision_wire.png" alt="Precision Measuring Wire" class="component-img">
+                </div>
+            </div>
+
+            <!-- Component 4: Micrometer (Bench or Floating Carriage) (Image: Micrometer Diagram) -->
+            <div class="component-card component-teal">
+                <div class="component-content">
+                    <h3>4. Precision Micrometer</h3>
+                    <p>The micrometer is used to measure the over-wire dimension, which includes the effective diameter and wire thickness.
+It provides fine resolution and high accuracy, crucial for determining the true thread dimensions.
+The readings from the micrometer are used in calculations to find the effective diameter of the thread precisely.</p>
+                </div>
+                <div class="component-image">
+                    <!-- Image 4: Micrometer -->
+                    <img src="img/micrometer_diagram.png" alt="Diagram of an External Micrometer" class="component-img">
+                </div>
+            </div>
+            
+            <button class="next-button" onclick="window.location.href='procedure.html'">Procedure &rarr;</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Virtual Metrology Lab</p>
+    </footer>
+    
+    <!-- Using defer to ensure the script runs after the DOM is loaded -->
+    <script src="js/script.js" defer></script>
+</body>
+</html>
+
