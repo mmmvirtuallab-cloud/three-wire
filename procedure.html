@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,7 +14,8 @@
   <style>
     /* ---------- PAGE LAYOUT ---------- */
     main {
-      max-width: 1400px;  /* wider main section */
+      max-width: 1400px;
+      /* wider main section */
       margin: 0 auto;
       padding: 20px;
     }
@@ -71,7 +73,8 @@
 
     /* ---------- PDF ---------- */
     .manual-pane .pane-content {
-      height: 600px; /* smaller height but scrollable */
+      height: 600px;
+      /* smaller height but scrollable */
       overflow-y: auto;
       background-color: #f1fcfa;
     }
@@ -110,6 +113,7 @@
       .two-pane-layout {
         flex-direction: column;
       }
+
       .manual-pane .pane-content {
         height: 400px;
       }
@@ -122,7 +126,7 @@
   <header>
     <h1>Virtual Metrology Lab: Three-Wire Method</h1>
     <nav>
-      <a href="materials.html" onclick="activateLink(event, 'materials.html')">Introduction</a>
+      <a href="index.html" onclick="activateLink(event, 'index.html')">Introduction</a>
       <a href="procedure.html" onclick="activateLink(event, 'procedure.html')">Procedure</a>
       <a href="lab.html" onclick="activateLink(event, 'lab.html')">Virtual Lab Area</a>
       <a href="quiz.html" onclick="activateLink(event, 'quiz.html')">Quiz</a>
@@ -143,8 +147,7 @@
         <div class="pane video-pane">
           <div class="pane-header">Video Demonstration</div>
           <div class="pane-content">
-            <iframe
-              src="https://www.youtube.com/embed/Z4ZHaGafMh8?start=83"
+            <iframe src="https://www.youtube.com/embed/Z4ZHaGafMh8?start=83"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen>
             </iframe>
@@ -178,4 +181,5 @@
 
   <script src="js/script.js" defer></script>
 </body>
+
 </html>

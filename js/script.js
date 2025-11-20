@@ -25,4 +25,4 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// git@github.com:mmmvirtuallab-cloud/Three-Wire-Method.git
+// git@github.com-virtuallab:mmmvirtuallab-cloud/Three-Wire-Method.git

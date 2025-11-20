@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
             max-width: 800px;
             margin: 0 auto;
         }
+
         .question-card {
             background-color: #f9fffd;
             border: 2px solid #b2dfdb;
@@ -19,14 +21,17 @@
             box-shadow: 0 4px 10px rgba(0, 77, 64, 0.1);
             transition: box-shadow 0.3s;
         }
+
         .question-card:hover {
             box-shadow: 0 6px 15px rgba(0, 77, 64, 0.2);
         }
+
         .question-card h4 {
             color: #004d40;
             margin-bottom: 15px;
             font-size: 1.15em;
         }
+
         .options label {
             display: block;
             background-color: #e0f2f1;
@@ -38,10 +43,12 @@
             border-left: 5px solid transparent;
             font-weight: 500;
         }
+
         .options label:hover {
             background-color: #b2dfdb;
             border-left: 5px solid #009688;
         }
+
         .options input[type="radio"] {
             margin-right: 10px;
             accent-color: #00796b;
@@ -55,18 +62,21 @@
             margin-top: 40px;
             border: 2px solid #009688;
         }
+
         #score-display {
             font-size: 2.5em;
             font-weight: 700;
             color: #004d40;
             margin-bottom: 10px;
         }
+
         .feedback {
             font-size: 1.1em;
             font-style: italic;
             color: #444;
             margin-bottom: 20px;
         }
+
         .button-group {
             display: flex;
             gap: 15px;
@@ -74,6 +84,7 @@
             flex-wrap: wrap;
             margin-top: 20px;
         }
+
         .next-button {
             background: #00796b;
             color: white;
@@ -83,46 +94,54 @@
             font-size: 1rem;
             font-weight: 600;
             cursor: pointer;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.2s, background 0.3s;
         }
+
         .next-button:hover {
             background: #004d40;
             transform: scale(1.05);
         }
+
         .next-button.check-btn {
             background: #009688;
         }
+
         .next-button.check-btn:hover {
             background: #00796b;
         }
+
         .question-card.correct-answer {
             border-color: #388e3c;
             background-color: #e8f5e9;
         }
+
         .question-card.incorrect-answer {
             border-color: #d32f2f;
             background-color: #ffebee;
         }
+
         .correct-option {
             background-color: #a5d6a7 !important;
             border-left-color: #388e3c !important;
         }
+
         .incorrect-choice {
             background-color: #ef9a9a !important;
             border-left-color: #d32f2f !important;
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1>Virtual Metrology Lab: Three-Wire Method</h1>
         <nav>
-            <a href="materials.html" onclick="activateLink(event, 'materials.html')">Introduction</a>
+            <a href="index.html" onclick="activateLink(event, 'index.html')">Introduction</a>
             <a href="procedure.html" onclick="activateLink(event, 'procedure.html')">Procedure</a>
             <a href="lab.html" onclick="activateLink(event, 'lab.html')">Virtual Lab Area</a>
             <a href="quiz.html" onclick="activateLink(event, 'quiz.html')">Quiz</a>
-            
+
         </nav>
     </header>
 
@@ -137,24 +156,30 @@
                     <div class="options">
                         <label><input type="radio" name="q1" value="A"> A) To measure the pitch of the thread</label>
                         <label><input type="radio" name="q1" value="B"> B) To measure the major diameter</label>
-                        <label><input type="radio" name="q1" value="C"> C) To measure the effective (pitch) diameter</label>
+                        <label><input type="radio" name="q1" value="C"> C) To measure the effective (pitch)
+                            diameter</label>
                         <label><input type="radio" name="q1" value="D"> D) To measure the thread angle</label>
                     </div>
                 </div>
                 <div class="question-card" data-answer="C">
                     <h4>Q2. In the three-wire method, why are three wires used instead of two?</h4>
                     <div class="options">
-                        <label><input type="radio" name="q2" value="A"> A) To balance the micrometer on the thread</label>
+                        <label><input type="radio" name="q2" value="A"> A) To balance the micrometer on the
+                            thread</label>
                         <label><input type="radio" name="q2" value="B"> B) To reduce parallax error</label>
-                        <label><input type="radio" name="q2" value="C"> C) To ensure correct alignment and average measurement over the thread flanks</label>
-                        <label><input type="radio" name="q2" value="D"> D) To measure both pitch and major diameter simultaneously</label>
+                        <label><input type="radio" name="q2" value="C"> C) To ensure correct alignment and average
+                            measurement over the thread flanks</label>
+                        <label><input type="radio" name="q2" value="D"> D) To measure both pitch and major diameter
+                            simultaneously</label>
                     </div>
                 </div>
                 <div class="question-card" data-answer="B">
-                    <h4>Q3. If the measured reading over wires (M) = 20.450 mm, wire diameter (d) = 0.5 mm, and the constant for the thread form is used, what does M represent in the three-wire method?</h4>
+                    <h4>Q3. If the measured reading over wires (M) = 20.450 mm, wire diameter (d) = 0.5 mm, and the
+                        constant for the thread form is used, what does M represent in the three-wire method?</h4>
                     <div class="options">
                         <label><input type="radio" name="q3" value="A"> A) The effective diameter directly</label>
-                        <label><input type="radio" name="q3" value="B"> B) The distance across the outer surfaces of wires</label>
+                        <label><input type="radio" name="q3" value="B"> B) The distance across the outer surfaces of
+                            wires</label>
                         <label><input type="radio" name="q3" value="C"> C) The minor diameter</label>
                         <label><input type="radio" name="q3" value="D"> D) The pitch diameter</label>
                     </div>
@@ -163,23 +188,26 @@
                     <h4>Q4. The "best size" wire in the three-wire method is the one that —</h4>
                     <div class="options">
                         <label><input type="radio" name="q4" value="A"> A) Fits tightly into the thread roots</label>
-                        <label><input type="radio" name="q4" value="B"> B) Contacts the thread flanks at the pitch line</label>
+                        <label><input type="radio" name="q4" value="B"> B) Contacts the thread flanks at the pitch
+                            line</label>
                         <label><input type="radio" name="q4" value="C"> C) Is equal to the thread pitch</label>
-                        <label><input type="radio" name="q4" value="D"> D) Is larger than the pitch of the thread</label>
+                        <label><input type="radio" name="q4" value="D"> D) Is larger than the pitch of the
+                            thread</label>
                     </div>
                 </div>
                 <div style="text-align: center; margin-top: 30px;">
                     <button type="button" class="next-button" id="submitBtn">Submit Quiz & Check Score</button>
                 </div>
             </form>
-            
+
             <div id="results-container" style="display: none;">
                 <h3>Your Quiz Results</h3>
                 <p id="score-display">0/4</p>
                 <p class="feedback" id="feedback-text"></p>
                 <div class="button-group">
                     <button type="button" class="next-button" id="tryAgainBtn">↻ Try Again</button>
-                    <button type="button" class="next-button check-btn" id="checkAnswersBtn">✓ Check Correct Answers</button>
+                    <button type="button" class="next-button check-btn" id="checkAnswersBtn">✓ Check Correct
+                        Answers</button>
                 </div>
             </div>
         </section>
@@ -190,15 +218,15 @@
     </footer>
     <script>
         let quizSubmitted = false;
-        document.getElementById('submitBtn').addEventListener('click', function() {
+        document.getElementById('submitBtn').addEventListener('click', function () {
             if (quizSubmitted) return;
             submitQuiz();
         });
 
-        document.getElementById('tryAgainBtn').addEventListener('click', function() {
+        document.getElementById('tryAgainBtn').addEventListener('click', function () {
             location.reload();
         });
-        document.getElementById('checkAnswersBtn').addEventListener('click', function() {
+        document.getElementById('checkAnswersBtn').addEventListener('click', function () {
             showCorrectAnswers();
         });
 
@@ -270,4 +298,5 @@
         }
     </script>
 </body>
+
 </html>
