@@ -13,7 +13,7 @@ export const INTRO_CONTENT = {
     
     // Aim Section
     aimTitle: "Aim",
-    aimContent: "To study the working principle of a profile projector and to measure the dimensions of given components such as screw threads, gears, and other complex profiles accurately.",
+    aimContent: "To determine the effective diameter of a screw thread using the three-wire method with a micrometer.",
 
     // Acknowledgement Section
     ackTitle: "Acknowledgement",
