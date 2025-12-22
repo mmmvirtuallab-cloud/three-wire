@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Magnified View - Three Wire Method</title>
   <style>
     * {
@@ -39,6 +40,7 @@
       from {
         opacity: 0;
       }
+
       to {
         opacity: 1;
       }
@@ -61,6 +63,7 @@
         transform: translateY(30px);
         opacity: 0;
       }
+
       to {
         transform: translateY(0);
         opacity: 1;
@@ -137,58 +140,61 @@
 
 <body>
 
-<!-- Magnify Modal -->
-<div id="magnifyModal">
-  <div class="magnify-container">
-    <button class="close-btn" id="closeMagnifyBtn">✕</button>
-    
-    <div class="magnify-title">Three-Wire Method Measurement Diagram</div>
-    
-    <div class="magnify-description">
-      This diagram illustrates the three-wire method for measuring the effective diameter of a threaded specimen.
-      <br>The wires rest in the thread valleys to provide accurate measurement points.
-    </div>
-    
-    <div class="magnify-image-wrapper">
-      <img id="magnifyImage" src="magnify.jpg" alt="Three-Wire Method Diagram">
+  <!-- Magnify Modal -->
+  <div id="magnifyModal">
+    <div class="magnify-container">
+      <button class="close-btn" id="closeMagnifyBtn">✕</button>
+
+      <div class="magnify-title">Three-Wire Method Measurement Diagram</div>
+
+      <div class="magnify-description">
+        This diagram illustrates the three-wire method for measuring the effective diameter of a threaded specimen.
+        <br>The wires rest in the thread valleys to provide accurate measurement points.
+      </div>
+
+      <div class="magnify-image-wrapper">
+        <img id="magnifyImage" src="magnify.jpg" alt="Three-Wire Method Diagram">
+      </div>
     </div>
   </div>
-</div>
 
-<script>
-  const magnifyModal = document.getElementById("magnifyModal");
-  const closeMagnifyBtn = document.getElementById("closeMagnifyBtn");
-  const magnifyImage = document.getElementById("magnifyImage");
+  <script>
+    const magnifyModal = document.getElementById("magnifyModal");
+    const closeMagnifyBtn = document.getElementById("closeMagnifyBtn");
+    const magnifyImage = document.getElementById("magnifyImage");
 
-  // Function to open magnify modal
-  window.openMagnifyModal = function() {
-    magnifyModal.classList.add("active");
-    document.body.style.overflow = "hidden"; // Prevent scrolling
-  };
+    // Function to open magnify modal
+    window.openMagnifyModal = function () {
+      magnifyModal.classList.add("active");
+      document.body.style.overflow = "hidden"; // Prevent scrolling
+    };
 
-  // Function to close magnify modal
-  function closeMagnifyModal() {
-    magnifyModal.classList.remove("active");
-    document.body.style.overflow = "auto"; // Allow scrolling
-  }
-
-  // Close button click
-  closeMagnifyBtn.addEventListener("click", closeMagnifyModal);
-
-  // Click outside modal to close
-  magnifyModal.addEventListener("click", function(e) {
-    if (e.target === magnifyModal) {
-      closeMagnifyModal();
+    // Function to close magnify modal
+    function closeMagnifyModal() {
+      magnifyModal.classList.remove("active");
+      document.body.style.overflow = "auto"; // Allow scrolling
     }
-  });
 
-  // Keyboard escape to close
-  document.addEventListener("keydown", function(e) {
-    if (e.key === "Escape") {
-      closeMagnifyModal();
-    }
-  });
-</script>
+    // Close button click
+    closeMagnifyBtn.addEventListener("click", closeMagnifyModal);
+
+    // Click outside modal to close
+    magnifyModal.addEventListener("click", function (e) {
+      if (e.target === magnifyModal) {
+        closeMagnifyModal();
+      }
+    });
+
+    // Keyboard escape to close
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") {
+        closeMagnifyModal();
+      }
+    });
+  </script>
 
 </body>
+
 </html>
+
+<!-- hlrlo -->
